@@ -1,0 +1,32 @@
+{% extends 'layout.html' %}
+{% block content %}
+<h1 id="title">Add Users App</h1>
+
+  <div class="container">
+
+    <form id="form">
+      <label for="name-user">Name User</label>
+      <input type="text" id="name-user" placeholder="Name" autofocus>
+
+      <label for="age-user">Age User</label>
+      <input type="number" id="age-user" placeholder="Age">
+
+      <label for="description-user">Description User</label>
+      <textarea id="description-user" cols="30" rows="10" placeholder="Description"></textarea>
+
+      <button type="button" id="add-button">Add</button>
+    </form>
+
+  </div>
+
+  <div class="users-view">
+      <table id="users-table">
+        <tr>
+          <th>Name</th>
+          <th>Age</th>
+          <th>Description</th>
+          <th>Actions</th>
+        </tr>
+      </table>
+  </div>
+{% endblock %}

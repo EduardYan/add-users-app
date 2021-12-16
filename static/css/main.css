@@ -1,0 +1,107 @@
+html {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+html, body {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #a3a3a3;
+}
+
+.user-add {
+  width: 80%;
+  margin: 3% auto;
+  display: grid;
+  grid-template-columns: 50% 50%;
+
+}
+
+#title {
+  font-size: 2.5rem;
+  color:#222;
+  margin: 1rem 8rem;
+  padding: 0;
+}
+
+.container label, .container input .container textarea, .container button{
+  display: block;
+  padding: 0.5rem 0;
+}
+
+.container input {
+  padding: 0.5rem;
+}
+
+.container label {
+  margin: 0.5rem 0 0 0;
+  color: #444;
+  font-size: 1.5rem;
+}
+
+.container textarea {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+
+.container button {
+  transition: background-color 0.3s ease;
+  margin: 15px 0;
+  width: 20rem;
+  color: #ccc;
+  background-color: #222;
+}
+
+.container button:hover {
+  cursor: pointer;
+  background-color: #555;
+}
+
+.users-view table {
+  border-collapse: collapse;
+}
+
+.users-view table th, .users-view table td {
+  border: 2px black solid;
+  padding: 0.5rem;
+}
+
+.users-view table th {
+  text-align: left;
+}
+
+.users-view table td {
+  text-align: center;
+}
+
+.users-view table th {
+  transition: background-color 0.3s ease;
+  background-color: #444;
+}
+
+.users-view table tr {
+  transition: background-color 0.3s ease;
+}
+
+.users-view table tr:hover, .delete-button {
+  cursor: pointer;
+}
+
+.users-view table tr th:hover {
+  background-color: #aaa;
+}
+
+.users-view table tr:hover {
+  background-color: #444;
+}
+
+.delete-button {
+  background-color: rgba(255, 0, 0, 0.6);
+  border-radius: 0.5rem; 
+  padding: 0.5rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1rem;
+}
