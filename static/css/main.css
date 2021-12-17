@@ -23,6 +23,7 @@ body {
 
 }
 
+/* title of the nav */
 #title {
   transition: color 0.3s ease;
   font-size: 2.5rem;
@@ -70,6 +71,7 @@ body {
   background-color: #555;
 }
 
+/* table of users */
 .users-view table {
   border-collapse: collapse;
 }
@@ -152,6 +154,7 @@ body {
   color: #555;
 }
 
+/* View of messages */
 .messages-view {
   transition: background-color 0.3s ease;
   background-color: #535353;
@@ -172,6 +175,7 @@ body {
   font-size: 20px;
 }
 
+/* Navigation */
 header nav {
   transition: background-color 0.3s ease;
   padding: 0.5rem;
@@ -204,6 +208,7 @@ header nav ul li #home-link {
 
 }
 
+/* Links */
 header nav ul li #about-link {
   float: right;
   padding: 1rem;
