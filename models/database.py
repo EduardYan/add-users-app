@@ -62,7 +62,7 @@ class DataBase:
     try:
       self.cur.execute(query)
 
-      self.cur.commit()
+      self.con.commit()
 
     except sqlite3.OperationalError as e:
       print(e)

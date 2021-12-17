@@ -1,3 +1,14 @@
+<!-- THIS IS THE NAV TO USE -->
 <nav>
-  <h1 id="title">This is a nav</h1>
+  <ul>
+    <li>
+      <a id="title" href="{{ url_for('home') }}">Add Users App</a>
+    </li>
+    <li>
+      <a href="{{ url_for('home') }}" id="home-link">Home</a>
+    </li>
+    <li>
+      <a href="{{ url_for('about') }}" id="about-link">About</a>
+    </li>
+  </ul>
 </nav>

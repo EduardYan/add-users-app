@@ -1,4 +1,6 @@
 {% extends 'layout.html' %}
+
+<!-- THIS IS THE HOME PAGE -->
 {% block content %}
 
   <div class="container">
@@ -17,6 +19,7 @@
 
   </div>
 
+  <!-- VALIDATING IF USER EXIST -->
   {% if users_list != [] %}
   <div class="users-view">
       <table>
@@ -26,12 +29,14 @@
           <th>Description</th>
           <th>Actions</th>
         </tr>
+        <!-- RECORRIENDO PARA MOSTRAR CADA USUARIO EN LA INTERFAZ -->
         {% for user in users_list %}
         <tr>
           <td>{{ user.name }}</td>
           <td>{{ user.age }}</td>
           <td>{{ user.description }}</td>
           <td>
+            <!-- LINKS FOR THE ROUTES OF THE SERVER -->
             <a href="/delete-user/{{ user.id }}" class="delete-button">Delete</a>
             <a href="/update-user/{{ user.id }}" class="update-button">Update</a>
           </td>

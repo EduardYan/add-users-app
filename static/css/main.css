@@ -26,13 +26,14 @@ body {
 #title {
   transition: color 0.3s ease;
   font-size: 2.5rem;
-  color:#222;
-  margin: 1rem 8rem;
+  text-decoration: none;
+  color:#fff;
+  margin: 0.5rem 3rem;
   padding: 0;
 }
 
 #title:hover {
-  color: #555;
+  color: #333;
 }
 
 .container label, .container input .container textarea, .container button{
@@ -88,7 +89,7 @@ body {
 
 .users-view table th {
   transition: background-color 0.3s ease;
-  background-color: #444;
+  background-color: #666;
 }
 
 .users-view table tr {
@@ -115,13 +116,14 @@ body {
 .delete-button, .update-button {
   transition: background-color 0.3s ease;
   border: 1px black solid;
-  border-radius: 1rem;
+  border-radius: 0.5rem;
   font-size: 1rem;
   text-decoration: none;
   color: #000;
   display: block;
   padding: 0.5rem;
   margin: 0.2rem 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .delete-button {
@@ -148,4 +150,77 @@ body {
 
 #no-users:hover {
   color: #555;
+}
+
+.messages-view {
+  transition: background-color 0.3s ease;
+  background-color: #535353;
+  color: #000;
+  text-align: center;
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 1.5rem;
+}
+
+.messages-view:hover {
+  cursor: pointer;
+  background-color: #666;
+  color: #fff;
+}
+
+#message {
+  font-size: 20px;
+}
+
+header nav {
+  transition: background-color 0.3s ease;
+  padding: 0.5rem;
+  background-color: #444;
+}
+
+header nav:hover {
+  background-color: #535353;
+}
+
+header ul {
+  list-style: none;
+  padding-left: 0;
+  display: grid;
+  grid-template-columns: 50% 40% 10%;
+}
+
+header ul li {
+  margin: 0.5rem;
+}
+
+header nav ul li #home-link {
+  float: right;
+  padding: 1rem;
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+  margin: 0;
+
+}
+
+header nav ul li #about-link {
+  float: right;
+  padding: 1rem;
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+  margin: 0;
+}
+
+
+header nav ul li #about-link:hover {
+  cursor: pointer;
+  color: #333;
+}
+
+header nav ul li #home-link:hover {
+  cursor: pointer;
+  color: #333;
 }

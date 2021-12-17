@@ -2,4 +2,19 @@
   These styles are for about page
 */
 
-body {background-color: blue;}
+.about-container {
+  width: 100%;
+  margin: 2rem auto;
+}
+
+.about-container p {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.5rem;
+  color: #000;
+  transition: color 0.3s ease;
+}
+
+.about-container p:hover {
+  cursor: pointer;
+  color: #333;
+}

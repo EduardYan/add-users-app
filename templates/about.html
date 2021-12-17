@@ -1,4 +1,8 @@
 {% extends 'layout.html' %}
+<!-- THIS IS THE ABOUT PAGE -->
 {% block content %}
-<h1>About Page</h1>
+<link rel="stylesheet" href="{{ url_for('static', filename = 'css/about.css') }}">
+<div class="about-container">
+  <p>This is a application for add users in sqlite3, with python and flask.</p>
+</div>
 {% endblock %}

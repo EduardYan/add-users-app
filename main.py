@@ -31,6 +31,15 @@ def home():
 
   return render_template('index.html', users_list = users_list)
 
+@app.route('/about')
+def about():
+  """
+  This route is for show the about
+  page.
+  """
+
+  return render_template('about.html')
+
 @app.route('/add-user', methods = ['POST'])
 def add_user():
   """
@@ -48,6 +57,9 @@ def add_user():
   db.insert(INSERT_USER.format(name_user = name, age_user = age, description_user = description))
   db.close()
 
+  flash('User Added')
+
+  # redirct to home
   return redirect(url_for('home'))
 
 @app.route('/delete-user/<string:id>')
@@ -60,10 +72,13 @@ def delete_user(id):
 
   id = int(id)
 
+  # deleeting of the database
   db = DataBase(DB_PATH)
   db.delete(DELETE_USER.format(id = id))
   db.close()
 
+  # showing messages and redirect to home
+  flash('User Deleted')
   return redirect(url_for('home'))
 
 @app.route('/update-user/<string:id>', methods = ['GET'])
@@ -73,14 +88,13 @@ def update_user(id):
   the page for update the user.
   """
 
+  # selection according your id of the user
   db = DataBase(DB_PATH)
   user = db.select(SELECT_A_USER.format(id = id))
   db.close()
 
+  # convert to user object
   user = User(user[0][0], user[0][1], user[0][2], user[0][3])
-  print(user.name)
-  print(user.age)
-  print(user.description)
 
   return render_template('update-user.html', user = user)
 
@@ -92,18 +106,20 @@ def update_a_user():
   in the database and redirect to home page.
   """
 
+  # getting the new data for the user
   id_user = request.form['id-user']
   name = request.form['new-name-user']
   age = request.form['new-age-user']
   description = request.form['new-description-user']
 
+  # updating the user in the database
   db = DataBase(DB_PATH)
-  print(UPDATE_USER.format(id = id_user, name_user = name, age_user = age, description_user = description))
   db.update(UPDATE_USER.format(id = id_user, name_user = name, age_user = age, description_user = description))
-  db.close()
+
+  flash('User Updated')
 
   return redirect(url_for('home'))
 
 if __name__ == '__main__':
   # running the server
-  app.run(host = '0.0.0.0', port = 3000, debug = True)
+  app.run(port = 3000, debug = True)

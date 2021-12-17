@@ -10,12 +10,25 @@
 </head>
 <body>
 
-  {% include 'partials/_nav.html' %}
-  
+  <header>
+    {% include 'partials/_nav.html' %}
+  </header>
+
+  <!-- GETTINGS THE MESSAGES AND VALIDATING FOR SHOW -->
+  {% with messages = get_flashed_messages() %}
+  {% if messages %}
+  <div class="messages-view">
+    <p id="message">{{ messages[0] }}</p>
+  </div>
+  {% endif %}
+  {% endwith %}
+
   <section class="add-users">
     {% block content %}
     {% endblock %}
   </section>
+
+  <script src="{{ url_for('static', filename = 'js/deleteMessage.js') }}"></script>
 
 </body>
 </html>
