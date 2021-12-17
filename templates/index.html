@@ -1,32 +1,47 @@
 {% extends 'layout.html' %}
 {% block content %}
-<h1 id="title">Add Users App</h1>
 
   <div class="container">
-
-    <form id="form">
+    <form action="/add-user" method="POST">
       <label for="name-user">Name User</label>
-      <input type="text" id="name-user" placeholder="Name" autofocus>
+      <input type="text" name="name-user" id="name-user" placeholder="Name" autofocus>
 
       <label for="age-user">Age User</label>
-      <input type="number" id="age-user" placeholder="Age">
+      <input type="number" name="age-user" id="age-user" placeholder="Age">
 
       <label for="description-user">Description User</label>
-      <textarea id="description-user" cols="30" rows="10" placeholder="Description"></textarea>
+      <textarea name="description-user" id="description-user" cols="30" rows="10" placeholder="Description"></textarea>
 
-      <button type="button" id="add-button">Add</button>
+      <button type="submit" id="add-button">Add</button>
     </form>
 
   </div>
 
+  {% if users_list != [] %}
   <div class="users-view">
-      <table id="users-table">
+      <table>
         <tr>
           <th>Name</th>
           <th>Age</th>
           <th>Description</th>
           <th>Actions</th>
         </tr>
+        {% for user in users_list %}
+        <tr>
+          <td>{{ user.name }}</td>
+          <td>{{ user.age }}</td>
+          <td>{{ user.description }}</td>
+          <td>
+            <a href="/delete-user/{{ user.id }}" class="delete-button">Delete</a>
+            <a href="/update-user/{{ user.id }}" class="update-button">Update</a>
+          </td>
+        </tr>
+        {% endfor %}
       </table>
   </div>
+
+  {% else %}
+  <h1 id="no-users">Not users yet</h1>
+  {% endif %}
+
 {% endblock %}

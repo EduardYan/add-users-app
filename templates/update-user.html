@@ -1,0 +1,23 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename = 'css/update-user.css') }}">
+<div class="container">
+  <h1>Update the User</h1>
+  <form action="/update-user" method="POST">
+    <label for="id">Id</label>
+    <input id="id" name="id-user" type="text" readonly value="{{ user.id }}">
+    <label for="name-user">Name User</label>
+    <input type="text" name="new-name-user" id="name-user" value="{{ user.name }}" placeholder="Name" autofocus>
+
+    <label for="age-user">Age User</label>
+    <input type="number" name="new-age-user" value="{{ user.age }}" id="age-user" placeholder="Age">
+
+    <label for="description-user">Description User</label>
+    <textarea name="new-description-user" id="description-user" cols="30" rows="10" placeholder="Description">{{ user.description }}</textarea>
+
+    <button type="submit" id="add-button">Update</button>
+  </form>
+
+</div>
+{% endblock %}

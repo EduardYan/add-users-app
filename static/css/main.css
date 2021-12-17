@@ -1,3 +1,7 @@
+/*
+  These styles are for the home page.
+*/
+
 html {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -11,7 +15,7 @@ body {
   background-color: #a3a3a3;
 }
 
-.user-add {
+.add-users {
   width: 80%;
   margin: 3% auto;
   display: grid;
@@ -20,10 +24,15 @@ body {
 }
 
 #title {
+  transition: color 0.3s ease;
   font-size: 2.5rem;
   color:#222;
   margin: 1rem 8rem;
   padding: 0;
+}
+
+#title:hover {
+  color: #555;
 }
 
 .container label, .container input .container textarea, .container button{
@@ -66,7 +75,7 @@ body {
 
 .users-view table th, .users-view table td {
   border: 2px black solid;
-  padding: 0.5rem;
+  padding: 1rem;
 }
 
 .users-view table th {
@@ -95,13 +104,48 @@ body {
 }
 
 .users-view table tr:hover {
-  background-color: #444;
+  background-color: #7a7272;
 }
 
 .delete-button {
   background-color: rgba(255, 0, 0, 0.6);
-  border-radius: 0.5rem; 
-  padding: 0.5rem;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.delete-button, .update-button {
+  transition: background-color 0.3s ease;
+  border: 1px black solid;
+  border-radius: 1rem;
   font-size: 1rem;
+  text-decoration: none;
+  color: #000;
+  display: block;
+  padding: 0.5rem;
+  margin: 0.2rem 0;
+}
+
+.delete-button {
+  background-color: #e94d4d99;
+}
+
+.delete-button:hover {
+  background-color: #df1d1d;
+}
+
+.update-button {
+  background-color: #8b8bf3;
+}
+
+.update-button:hover {
+  background-color: #5959e7;
+}
+
+#no-users {
+  transition: color 0.3s ease;
+  color: #333;
+  height: 1rem;
+}
+
+#no-users:hover {
+  color: #555;
 }
