@@ -234,6 +234,7 @@ header nav ul li #home-link:hover {
 footer {
   transition: background-color 0.3s ease;
   padding: 1.5rem;
+  margin-top: 100px;
   background-color: #333;
   color: #ffffff;
 }
