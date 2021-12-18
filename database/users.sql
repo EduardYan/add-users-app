@@ -1,3 +1,4 @@
+-- This is the model for the database
 BEGIN TRANSACTION;
 DROP TABLE IF EXISTS "users";
 CREATE TABLE IF NOT EXISTS "users" (

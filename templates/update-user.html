@@ -1,9 +1,14 @@
 {% extends 'layout.html' %}
 
+<!-- PAGE FOR EDIT THE USER -->
+
 {% block content %}
+<!-- STYLE OWN -->
 <link rel="stylesheet" href="{{ url_for('static', filename = 'css/update-user.css') }}">
+
 <div class="container">
   <h1>Update the User</h1>
+
   <form action="/update-user" method="POST">
     <label for="id">Id</label>
     <input id="id" name="id-user" type="text" readonly value="{{ user.id }}">
